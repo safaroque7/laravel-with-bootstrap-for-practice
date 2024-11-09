@@ -21,7 +21,7 @@ class ClientController extends Controller
             'name' => 'required',
             'phone' => 'required|unique:clients|max:18|min:11',
             'email' => 'required|unique:clients',
-            'client_photo' => 'mimes:jpg,jpeg,png|max:500',
+            // 'client_photo' => 'mimes:jpg,jpeg,png|max:500|min:50',
         ]);
 
         $imageName = null;
@@ -167,7 +167,7 @@ class ClientController extends Controller
         // $totalGoogleReviewLeft = Client::where('google_review', 0)->count();
         // $totalGoogleReviewed = Client::where('google_review', 1)->count();
 
-        return view ('email.email', [
+        return view ('layouts.email.email', [
             'activeClientsEmailAddresess' => $activeClientsEmailAddresess,
             'inActiveClientsEmailAddresess' => $inActiveClientsEmailAddresess,
             'facebookReviewLeftCollection' => $facebookReviewLeftCollection,

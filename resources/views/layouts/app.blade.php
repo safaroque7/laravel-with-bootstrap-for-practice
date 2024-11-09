@@ -63,7 +63,7 @@
 
     </div>
 
-    <div class="row d-flex justify-content-between">
+    <div class="row d-flex">
         <!-- dashboard navbar start -->
         <div class="col-md-2 bg-dark vh-100 px-0">
             <ul class="nav flex-column">
@@ -116,6 +116,13 @@
                     </a>
                 </li>
 
+                <li class="nav-item border-bottom">
+                    <a class="nav-link text-white" href="{{ route('show-all-post') }}">
+                        <i class="bi bi-grid-3x3-gap-fill pe-md-3 pe-2"></i>All Posts 
+                        <span class="text-white me-md-3 me-2 float-end"> {{ __($totalPosts) }} </span>
+                    </a>
+                </li>
+
                 {{-- <li>
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
@@ -154,6 +161,7 @@
         @yield('single-client-info')
         @yield('facebook-review-left-email')
         @yield('add-new-post')
+        @yield('show-post')
 
     </div>
 

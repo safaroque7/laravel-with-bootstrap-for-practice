@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Carbon\Carbon;
+use App\Models\Post;
 use App\Models\Client;
 use App\Models\Service;
 use App\Models\DomainProvider;
@@ -39,6 +40,7 @@ class AppServiceProvider extends ServiceProvider
             $totalService = Service::count();
             $totalDomainProvider = DomainProvider::count();
             $totalHostingProvder = HostingProvder::count();
+            $totalPosts = Post::count();
            
 
             $view->with(
@@ -54,6 +56,7 @@ class AppServiceProvider extends ServiceProvider
                     'totalService' => $totalService,
                     'totalDomainProvider' => $totalDomainProvider,
                     'totalHostingProvder' => $totalHostingProvder,
+                    'totalPosts' => $totalPosts,
                 ]
             );
         });

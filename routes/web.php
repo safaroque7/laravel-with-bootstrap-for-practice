@@ -61,6 +61,11 @@ Route::middleware('auth')->group(function () {
     //Add new post
     Route::get('/add-new-post', [PostController::class, 'index'])->name('add-new-post');
     Route::post('/store-post', [PostController::class, 'store'])->name('store-post');
+    Route::get('/show-all-post', [PostController::class, 'showAllPost'])->name('show-all-post');
+    Route::get('/show-single-post/{id}', [PostController::class, 'singlePost'])->name('single-post');
+    Route::get('/edit-single-post/{id}', [PostController::class, 'edit'])->name('edit-single-post');
+    Route::post('/update-single-post/{id}', [PostController::class, 'update'])->name('update-single-post');
+    Route::get('/delete-single-post/{id}', [PostController::class, 'delete'])->name('delete-single-post');
 
 });
 
