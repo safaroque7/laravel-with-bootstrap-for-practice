@@ -67,6 +67,9 @@ Route::middleware('auth')->group(function () {
     Route::post('/update-single-post/{id}', [PostController::class, 'update'])->name('update-single-post');
     Route::get('/delete-single-post/{id}', [PostController::class, 'delete'])->name('delete-single-post');
 
+    //show more posts except current one
+    
+
 });
 
 require __DIR__.'/auth.php';

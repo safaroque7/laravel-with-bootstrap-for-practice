@@ -71,9 +71,6 @@ class ClientController extends Controller
     // for updating
     public function update(Request $request, $id) {
 
-
-
-
         $request->validate([
             'name' => 'required',
             'phone' => 'required|max:18|min:11',
@@ -148,7 +145,6 @@ class ClientController extends Controller
             'allHostingProvider' => $allHostingProvider,
         ]);
     }
-
 
     //for collecting facebook review left emails
     public function email(){

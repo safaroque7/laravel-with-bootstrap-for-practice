@@ -40,7 +40,7 @@ class PostController extends Controller
 
     //show all posts
     public function showAllPost(){
-        $allPostCollection = Post::all();
+        $allPostCollection = Post::all()->reverse();
         return view('layouts.post.all-posts', [
             'allPostCollection' => $allPostCollection,
         ]);
@@ -48,9 +48,11 @@ class PostController extends Controller
 
     //showSinglePost
     public function singlePost($id){
+        $allPostExceptCurrentPost = Post::all()->skip(1)->reverse()->take(5);
         $singlePost = Post::findOrFail($id);
         return view('layouts.post.single-post', [
             'singlePost' => $singlePost,
+            'allPostExceptCurrentPost' => $allPostExceptCurrentPost,
         ]);
     }
 
