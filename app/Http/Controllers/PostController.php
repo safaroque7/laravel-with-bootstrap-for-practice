@@ -48,6 +48,7 @@ class PostController extends Controller
 
     //showSinglePost
     public function singlePost($id){
+        // $allPostExceptCurrentPost = Post::all()->skip(1)->reverse()->take(5);
         $allPostExceptCurrentPost = Post::all()->skip(1)->reverse()->take(5);
         $singlePost = Post::findOrFail($id);
         return view('layouts.post.single-post', [
