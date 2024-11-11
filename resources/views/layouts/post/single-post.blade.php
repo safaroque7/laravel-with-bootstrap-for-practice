@@ -12,27 +12,35 @@
             </ol>
         </nav>
 
-        <img src="/images/{{ __($singlePost->image) }}" alt="{{ __($singlePost->title) }}" class="img-fluid mb-md-3 mb-2"
-            onerror="this.onerror=null; this.src='https://picsum.photos/950/450';" />
+        <div class="d-flex justify-content-center">
+            <img src="/images/{{ __($singlePost->image) }}" alt="{{ __($singlePost->title) }}"
+                class="img-fluid mb-md-2 mb-1" onerror="this.onerror=null; this.src='https://picsum.photos/950/450';" />
+        </div>
+        @if (isset($singlePost->caption))
+            <p class="text-secondary mb-md-5 mb-2 text-center"> {{ __($singlePost->caption) }} </p>
+        @endif
 
         <h1 class="mb-md-3 md-2"> {{ __($singlePost->title) }} </h1>
+        <p> {{ date('d F, Y  |  h:i', strtotime($singlePost->created_at)) }} </p>
         <p>{{ __($singlePost->description) }}</p>
     </div>
 
     <div class="col-md-3 mt-md-5">
-        <div class="bg-info p-3">
+        <h2> আরও খবর </h2>
+        <div class="">
             @foreach ($allPostExceptCurrentPost as $allPostExceptCurrentPostItem)
-                <div class="bg-dark position-relative mb-md-3 mb-2">
+                <div class="position-relative mb-md-3 mb-2">
                     <img src="/images/{{ __($allPostExceptCurrentPostItem->image) }}"
                         alt="{{ __($allPostExceptCurrentPostItem->title) }}" class="img-fluid mb-md-2"
                         onerror="this.onerror=null; this.src='https://picsum.photos/950/450';" />
 
                     <div class="p-2">
-                        <p class="text-white"> {{ __($allPostExceptCurrentPostItem->id) }} </p>
-                        <h2 class="text-white"> <a href="{{ route('single-post', $allPostExceptCurrentPostItem->id) }}"
-                                class="stretched-link text-decoration-none text-white">
+                        {{-- <p class="text-white"> {{ __($allPostExceptCurrentPostItem->id) }} </p> --}}
+                        <h2> <a href="{{ route('single-post', $allPostExceptCurrentPostItem->id) }}"
+                                class="stretched-link text-decoration-none text-dark lh-base">
                                 {{ __($allPostExceptCurrentPostItem->title) }} </a> </h2>
-                        <p class="text-white mb-0"> {{ date('d F, Y  |  h:i', strtotime($allPostExceptCurrentPostItem->created_at)) }}
+                        <p class="text-dark mb-0">
+                            {{ date('d F, Y  |  h:i', strtotime($allPostExceptCurrentPostItem->created_at)) }}
                         </p>
                     </div>
                 </div>

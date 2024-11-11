@@ -19,3 +19,7 @@ td.post-image-size {
     width: 75px;
     height: auto;
 }
+
+.category-items-box {
+    height: 300px;
+}

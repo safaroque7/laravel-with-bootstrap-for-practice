@@ -31,8 +31,13 @@ class PostController extends Controller
         $arrayPost = new Post;
 
         $arrayPost->title = $request->title;
+        $arrayPost->sub_title = $request->sub_title;
         $arrayPost->description = $request-> description;
         $arrayPost->image = $imageName;
+        $arrayPost->caption = $request->caption;
+        $arrayPost->summary = $request->summary;
+        $arrayPost->excerpt = $request->excerpt;
+        $arrayPost->comments = $request->comments;
         $arrayPost->save();
 
         return redirect()->back()->with('success', 'The post has been posted successfully');
