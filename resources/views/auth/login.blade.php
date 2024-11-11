@@ -68,6 +68,8 @@
                                         {{ __('Forgot your password?') }}
                                     </a>
                                 @endif
+
+                                <a href="{{ ('/contact-form') }}" class="btn btn-secondary text-decoration-none"> Contact us </a>
                             </div>
                         </div>
                     </form>

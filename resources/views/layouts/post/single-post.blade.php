@@ -19,7 +19,7 @@
         <p>{{ __($singlePost->description) }}</p>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-3 mt-md-5">
         <div class="bg-info p-3">
             @foreach ($allPostExceptCurrentPost as $allPostExceptCurrentPostItem)
                 <div class="bg-dark position-relative mb-md-3 mb-2">

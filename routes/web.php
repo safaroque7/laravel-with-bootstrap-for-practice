@@ -8,6 +8,9 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
 
+Route::get('/contact-form', function () {
+    return view('contact-form');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -68,8 +71,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/delete-single-post/{id}', [PostController::class, 'delete'])->name('delete-single-post');
 
     //show more posts except current one
-    
-
 });
 
 require __DIR__.'/auth.php';
