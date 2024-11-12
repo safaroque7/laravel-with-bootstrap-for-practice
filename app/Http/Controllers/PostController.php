@@ -92,8 +92,10 @@ class PostController extends Controller
         }
 
         $updatePost->title = $request->title;
+        $updatePost->sub_title = $request->sub_title;
         $updatePost->description = $request-> description;
         $updatePost->image = $imageName;
+        $updatePost->caption = $request-> caption;
         $updatePost->save();
 
         return redirect()->back()->with('success', 'The post has been updated successfully');

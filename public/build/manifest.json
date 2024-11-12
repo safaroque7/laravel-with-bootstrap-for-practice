@@ -1,0 +1,53 @@
+{
+  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
+    "file": "assets/bootstrap-icons-BOrJxbIo.woff",
+    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
+  },
+  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": {
+    "file": "assets/bootstrap-icons-BtvjY1KL.woff2",
+    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
+  },
+  "node_modules/datatables/media/images/sort_asc.png": {
+    "file": "assets/sort_asc-B4Gje4tW.png",
+    "src": "node_modules/datatables/media/images/sort_asc.png"
+  },
+  "node_modules/datatables/media/images/sort_asc_disabled.png": {
+    "file": "assets/sort_asc_disabled-CJD3ufk-.png",
+    "src": "node_modules/datatables/media/images/sort_asc_disabled.png"
+  },
+  "node_modules/datatables/media/images/sort_both.png": {
+    "file": "assets/sort_both-BgEUlDF2.png",
+    "src": "node_modules/datatables/media/images/sort_both.png"
+  },
+  "node_modules/datatables/media/images/sort_desc.png": {
+    "file": "assets/sort_desc-CY-iuP5X.png",
+    "src": "node_modules/datatables/media/images/sort_desc.png"
+  },
+  "node_modules/datatables/media/images/sort_desc_disabled.png": {
+    "file": "assets/sort_desc_disabled-Ce0Saquh.png",
+    "src": "node_modules/datatables/media/images/sort_desc_disabled.png"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-CNs4vVbI.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "css": [
+      "assets/app-CV2WMv30.css"
+    ],
+    "assets": [
+      "assets/bootstrap-icons-BtvjY1KL.woff2",
+      "assets/bootstrap-icons-BOrJxbIo.woff",
+      "assets/sort_both-BgEUlDF2.png",
+      "assets/sort_asc-B4Gje4tW.png",
+      "assets/sort_desc-CY-iuP5X.png",
+      "assets/sort_asc_disabled-CJD3ufk-.png",
+      "assets/sort_desc_disabled-Ce0Saquh.png"
+    ]
+  },
+  "resources/sass/app.scss": {
+    "file": "assets/app-C8iBQtUg.css",
+    "src": "resources/sass/app.scss",
+    "isEntry": true
+  }
+}

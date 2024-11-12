@@ -65,7 +65,7 @@
 
     <div class="row d-flex">
         <!-- dashboard navbar start -->
-        <div class="col-md-2 bg-dark vh-100 px-0">
+        <div class="col-md-2 bg-dark vh-100 px-0 sticky-top">
             <ul class="nav flex-column">
                 <li class="nav-item border-bottom">
                     <a class="nav-link text-white" href="{{ route('all-clients') }}">
