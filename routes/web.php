@@ -2,15 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DomainProviderController;
 use App\Http\Controllers\HostingProvderController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
 
-Route::get('/contact-form', function () {
-    return view('contact-form');
-});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -72,5 +70,10 @@ Route::middleware('auth')->group(function () {
 
     //show more posts except current one
 });
+
+Route::get('/contact-form', function () {
+    return view('contact-form');
+});
+Route::post('/contact-store', [ContactController::class, 'store'])->name('contact-store');
 
 require __DIR__.'/auth.php';
