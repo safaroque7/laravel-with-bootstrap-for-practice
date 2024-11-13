@@ -126,7 +126,7 @@
                 <li class="nav-item border-bottom">
                     <a class="nav-link text-white" href="{{ route('category') }}">
                         <i class="bi bi-grid-3x3-gap-fill pe-md-3 pe-2"></i>Category 
-                        <span class="text-white me-md-3 me-2 float-end"> 00 </span>
+                        <span class="text-white me-md-3 me-2 float-end"> {{ __($totalCategories) }} </span>
                     </a>
                 </li>
 

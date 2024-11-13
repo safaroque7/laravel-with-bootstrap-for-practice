@@ -8,13 +8,13 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">
-                    Add New Category
+                    Edit Category
                 </li>
             </ol>
         </nav>
         <!-- breadcrumbs end -->
 
-
+        <div class="display-5 ps-5 animate__pulse animate__animated animate__infinite infinite"> Edit </div>
 
         @if (session('success'))
             <h2 class="text-success"> {{ session('success') }} </h2>
@@ -23,22 +23,23 @@
         <div class="row mb-md-3 mb-2">
             <div class="col-md-4">
 
-                <form action="{{ route('category-store') }}" method='POST'>
+                <form action="{{ route('category-update', $editedCategory->id) }}" method='POST'>
                     @csrf
 
                     <label for="category-name" class="form-label"> Category Name </label>
                     <input autofocus type="text" name="name"
                         class="form-control mb-md-3 border-@if ($errors->has('name')) {{ __('danger') }} @endif"
-                        value="{{ old('name') }}">
+                        value="{{ __($editedCategory->name) }}">
 
                     @if ($errors->has('name'))
                         <p class="text-danger"> {{ $errors->first('name') }} </p>
                     @endif
 
                     <label for="description"> Description </label>
-                    <textarea name="description" id="description" cols="30" rows="5" class="form-control mb-md-3 mb-2"></textarea>
-
-                    <button type="submit" class="btn btn-primary">Submit</button>
+<textarea name="description" id="description" cols="30" rows="5" class="form-control mb-md-3 mb-2">
+{{ __($editedCategory->description) }}
+</textarea>
+                    <button type="submit" class="btn btn-primary">Update</button>
 
                 </form>
 

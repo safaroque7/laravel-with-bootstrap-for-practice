@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use App\Models\Post;
 use App\Models\Client;
 use App\Models\Service;
+use App\Models\Category;
 use App\Models\DomainProvider;
 use App\Models\HostingProvder;
 use Illuminate\Support\Facades\View;
@@ -41,6 +42,7 @@ class AppServiceProvider extends ServiceProvider
             $totalDomainProvider = DomainProvider::count();
             $totalHostingProvder = HostingProvder::count();
             $totalPosts = Post::count();
+            $totalCategories = Category::count();
            
 
             $view->with(
@@ -57,6 +59,7 @@ class AppServiceProvider extends ServiceProvider
                     'totalDomainProvider' => $totalDomainProvider,
                     'totalHostingProvder' => $totalHostingProvder,
                     'totalPosts' => $totalPosts,
+                    'totalCategories' => $totalCategories,
                 ]
             );
         });

@@ -73,6 +73,9 @@ Route::middleware('auth')->group(function () {
     //category
     Route::get('/category', [CategoryController::class, 'index'])->name('category');
     Route::post('/category-store', [CategoryController::class, 'store'])->name('category-store');
+    Route::get('/category-edit/{id}', [CategoryController::class, 'edit'])->name('category-edit');
+    Route::post('/category-update/{id}', [CategoryController::class, 'update'])->name('category-update');
+    Route::get('/category-delete/{id}', [CategoryController::class, 'delete'])->name('category-delete');
 });
 
 Route::get('/contact-form', function () {
