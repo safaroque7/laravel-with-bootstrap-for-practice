@@ -28,12 +28,12 @@
     "src": "node_modules/datatables/media/images/sort_desc_disabled.png"
   },
   "resources/js/app.js": {
-    "file": "assets/app-CNs4vVbI.js",
+    "file": "assets/app-C2jnebXP.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-CV2WMv30.css"
+      "assets/app-DiKdzzMu.css"
     ],
     "assets": [
       "assets/bootstrap-icons-BtvjY1KL.woff2",

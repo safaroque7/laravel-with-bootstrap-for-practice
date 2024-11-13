@@ -69,7 +69,7 @@
                                     </a>
                                 @endif
 
-                                <a href="{{ ('/contact-form') }}" class="btn btn-secondary text-decoration-none"> Contact us </a>
+                                <a href="{{ ('/contact-form') }}" class="btn btn-secondary text-decoration-none animate__animated animate__pulse animate__infinite infinite"> Contact us </a>
                             </div>
                         </div>
                     </form>

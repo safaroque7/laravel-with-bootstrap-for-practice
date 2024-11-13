@@ -9,7 +9,9 @@
                     <h2 class="text-success"> {{ session('success') }} </h2>
                 @endif
 
-                <h2> <span class="animate__animated animate__bounce animate__delay-2s"> Edit: </span> {{ __($editSinglePost->title) }} </h2>
+                <h5 class="animate__animated animate__fadeOut animate__infinite text-primary"> Edit </h5>
+                <h2> {{ __($editSinglePost->title) }} </h2>
+
                 <div class="d-flex justify-content-start">
                     Link : <a href="{{ route('single-post', $editSinglePost->id) }}" class="mb-md-3 mb-1 d-block"> {{ __($editSinglePost->title) }}</a>
                 </div>
