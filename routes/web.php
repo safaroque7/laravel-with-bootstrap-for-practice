@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ContactController;
@@ -67,8 +68,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/edit-single-post/{id}', [PostController::class, 'edit'])->name('edit-single-post');
     Route::post('/update-single-post/{id}', [PostController::class, 'update'])->name('update-single-post');
     Route::get('/delete-single-post/{id}', [PostController::class, 'delete'])->name('delete-single-post');
-
     //show more posts except current one
+
+    //category
+    Route::get('/category', [CategoryController::class, 'index'])->name('category');
+    Route::post('/category-store', [CategoryController::class, 'store'])->name('category-store');
 });
 
 Route::get('/contact-form', function () {

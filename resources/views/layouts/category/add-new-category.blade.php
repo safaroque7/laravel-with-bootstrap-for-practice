@@ -8,7 +8,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">
-                    Add New Hosting Provider's Name
+                    Add New Category
                 </li>
             </ol>
         </nav>
@@ -23,10 +23,10 @@
         <div class="row mb-md-3 mb-2">
             <div class="col-md-4">
 
-                <form action="{{ route('store') }}" method='POST'>
+                <form action="{{ route('category-store') }}" method='POST'>
                     @csrf
 
-                    <label for="category-name" class="form-label"> Hosting provider's Name </label>
+                    <label for="category-name" class="form-label"> Category Name </label>
                     <input autofocus type="text" name="name"
                         class="form-control mb-md-3 border-@if ($errors->has('name')) {{ __('danger') }} @endif"
                         value="{{ old('name') }}">
@@ -34,6 +34,9 @@
                     @if ($errors->has('name'))
                         <p class="text-danger"> {{ $errors->first('name') }} </p>
                     @endif
+
+                    <label for="description"> Description </label>
+                    <textarea name="description" id="description" cols="30" rows="5" class="form-control mb-md-3 mb-2"></textarea>
 
                     <button type="submit" class="btn btn-primary">Submit</button>
 
@@ -46,26 +49,28 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Hosting Provider's Name</th>
+                            <th>Category Name</th>
+                            <th>Description</th>
                             <th>Action</th>
 
                         </tr>
                     </thead>
                     <tbody>
 
-                        @foreach ($hostingProvderCollection as $hostingProvderItem)
+                        @foreach ($allCategoryCollection as $allCategoryItem)
                             <!-- category item start -->
                             <tr>
-                                <td> {{ __($hostingProvderItem->id) }} </td>
-                                <td> {{ __($hostingProvderItem->name) }} </td>
+                                <td> {{ __($allCategoryItem->id) }} </td>
+                                <td> {{ __($allCategoryItem->name) }} </td>
+                                <td class="text-secondary"> {{ __($allCategoryItem->description) }} </td>
                                 <td>
                                     <button class="btn btn-info text-white">
-                                        <a href="{{ route('edit-hosting-provider', $hostingProvderItem->id) }}"
+                                        <a href="{{ route('edit-hosting-provider', $allCategoryItem->id) }}"
                                             class="text-decoration-none text-white"> Edit </a>
                                     </button>
                                     <button class="btn btn-danger text-white">
                                         <a onclick="return confirm('Are you sure you want to delete this item?')"
-                                            href="{{ route('delete-hosting-provider', $hostingProvderItem->id) }}"
+                                            href="{{ route('delete-hosting-provider', $allCategoryItem->id) }}"
                                             class="text-decoration-none text-white"> Delete </a>
                                     </button>
                                 </td>
@@ -77,7 +82,8 @@
                     <tfoot>
                         <tr>
                             <th>#</th>
-                            <th> Service Name</th>
+                            <th> Category Name</th>
+                            <th> Description </th>
                             <th>Action</th>
                         </tr>
                     </tfoot>
