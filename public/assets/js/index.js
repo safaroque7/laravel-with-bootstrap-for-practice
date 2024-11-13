@@ -53,3 +53,8 @@ setInterval(function () {
     // document.getElementById("bangla-digits-show").innerHTML = banglaText;
   
   }, 1000);
+
+
+  $(function() {
+    $("#table_id").dataTable();
+});

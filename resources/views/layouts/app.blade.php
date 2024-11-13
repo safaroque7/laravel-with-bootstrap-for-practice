@@ -168,11 +168,6 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 
-    <script>
-        $(function() {
-            $("#table_id").dataTable();
-        });
-    </script>
     <script src="{{ asset('assets/js/index.js') }}"></script>
 </body>
 
