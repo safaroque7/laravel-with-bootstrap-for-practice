@@ -13,7 +13,8 @@
                 <h2> {{ __($editSinglePost->title) }} </h2>
 
                 <div class="d-flex justify-content-start">
-                    Link : <a href="{{ route('single-post', $editSinglePost->id) }}" class="mb-md-3 mb-1 d-block"> {{ __($editSinglePost->title) }}</a>
+                    Link : <a href="{{ route('single-post', $editSinglePost->id) }}" class="mb-md-3 mb-1 d-block">
+                        {{ __($editSinglePost->title) }}</a>
                 </div>
 
                 <form action="{{ route('update-single-post', $editSinglePost->id) }}" method="POST"
@@ -48,268 +49,27 @@
                     <h6 class="bg-secondary mx-0 p-2 text-white mb-0"> Categories </h6>
                     <ul
                         class="list-unstyled px-3 overflow-auto category-items-box border border-1 border-secondary rounded-2">
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="category1">
-                                <label class="form-check-label" for="category1"> Category 1 </label>
-                            </div>
-                        </li>
+
+                        @foreach ($allCategoryCollection as $allCategoryItem)
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value=""
+                                        id="category{{ __($allCategoryItem->id) }}">
+                                    <label class="form-check-label" for="category{{ __($allCategoryItem->id) }}">
+                                        {{ __($allCategoryItem->name) }} </label>
+                                </div>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
                 {{-- image --}}
                 <div class="mb-md-3 mb-2">
-                    
+
                     <label for="image"></label>
                     <input type="file" name="image" id="image" class="form-control mb-md-3">
                     <img src="/images/{{ __($editSinglePost->image) }}" alt="{{ __($editSinglePost->title) }}"
                         class="img-fluid d-block mb-md-3 mb-2">
-                        @if ($errors->has('image'))
+                    @if ($errors->has('image'))
                         <span class="text-danger"> {{ $errors->first('image') }} </span>
                     @endif
 
@@ -318,7 +78,8 @@
                 {{-- Caption --}}
                 <div class="mb-md-3 mb-2">
                     <h6 class="bg-secondary mx-0 p-2 text-white mb-0"> Caption </h6>
-                    <input type="text" name="caption" id="caption" class="form-control" value="{{ __($editSinglePost->caption) }}">
+                    <input type="text" name="caption" id="caption" class="form-control"
+                        value="{{ __($editSinglePost->caption) }}">
                 </div>
 
                 {{-- Summary --}}

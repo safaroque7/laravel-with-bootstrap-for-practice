@@ -70,8 +70,11 @@ class PostController extends Controller
     //edit
     public function edit($id){
         $editSinglePost = Post::findOrFail($id);
+        $allCategoryCollection = Category::all();
+        
         return view('layouts.post.edit', [
             'editSinglePost' => $editSinglePost,
+            'allCategoryCollection' => $allCategoryCollection,
         ]);
     }
 
