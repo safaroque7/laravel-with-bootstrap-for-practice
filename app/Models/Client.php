@@ -9,7 +9,23 @@ class Client extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'phone',
+        'email',
+        'gender',
+        'address',
+        'facebook_review',
+        'google_review',
+        'page_number',
+        'client_photo',
+        'services',
+        'status',
+        'facebook_profile_link',
+        'date_of_birth',
+    ];
+
     public function services(){
-        return $this->hasMany(Service::class);
+        return $this->belongsToMany(Service::class);
     }
 }

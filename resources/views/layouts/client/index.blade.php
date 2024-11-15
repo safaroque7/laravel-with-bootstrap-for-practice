@@ -121,16 +121,19 @@
                         Select Services
                     </label>
 
-                    @foreach ($allServicesCollection as $allServicesItem)
-                        <!-- checkbox item -->
-                        <div class="form-check mb-md-3 mb-2">
-                            <input type="checkbox" class="form-check-input" name="" id="checkbox{{ __($allServicesItem->id) }}"
-                                value="" />
-                            <label class="form-check-label" for="checkbox{{ __($allServicesItem->id) }}">
-                                {{ __($allServicesItem->name) }}
-                            </label>
-                        </div>
-                    @endforeach
+                    <div class="d-flex flex-wrap">
+
+                        @foreach ($allServicesCollection as $allServicesItem)
+                            <!-- checkbox item -->
+                            <div class="form-check mb-md-3 mb-2 w-50">
+                                <input type="checkbox" class="form-check-input" name="services[]"
+                                    id="checkbox{{ $allServicesItem->id }}" value="{{ $allServicesItem->id }}" />
+                                <label class="form-check-label" for="checkbox{{ $allServicesItem->id }}">
+                                    {{ $allServicesItem->name }}
+                                </label>
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
 
                 <div class="col-md-2">
