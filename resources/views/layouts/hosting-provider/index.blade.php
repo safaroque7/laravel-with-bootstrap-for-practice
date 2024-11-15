@@ -23,7 +23,7 @@
         <div class="row mb-md-3 mb-2">
             <div class="col-md-4">
 
-                <form action="{{ route('store') }}" method='POST'>
+                <form action="{{ route('store-new-hosting-provider') }}" method='POST'>
                     @csrf
 
                     <label for="category-name" class="form-label"> Hosting provider's Name </label>

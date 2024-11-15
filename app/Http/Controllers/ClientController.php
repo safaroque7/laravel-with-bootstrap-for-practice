@@ -11,7 +11,10 @@ use App\Models\HostingProvder;
 class ClientController extends Controller
 {
     public function index(){
-        return view('layouts.client.index');
+        $allServicesCollection = Service::all();
+        return view('layouts.client.index', [
+            'allServicesCollection'=>$allServicesCollection
+        ]);
     }
 
     //for storing
@@ -49,16 +52,7 @@ class ClientController extends Controller
         return redirect()->back()->with("success", "Your client's information has been recorded successfully.");
     }
 
-
-
-    //for showing
-    public function show(){
-        $clientCollection = Client::all();
-
-        return view('layouts.client.all-clients', [
-            'clientCollection' => $clientCollection
-        ]);
-    }
+   
 
     //for editing
     public function edit($id){
