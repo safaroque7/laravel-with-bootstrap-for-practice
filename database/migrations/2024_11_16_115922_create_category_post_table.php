@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('client_service', function (Blueprint $table) {
-            $table->foreignId('client_id')->constrained('clients')->cascadeOnDelete();
-            $table->foreignId('service_id')->constrained('services')->cascadeOnDelete();
+        Schema::create('category_post', function (Blueprint $table) {
+            $table->foreignId('post_id')->constrained('posts')->cascadeOnDelete(); //
+            $table->foreignId('category_id')->constrained('categories')->cascadeOnDelete(); //
         });
     }
 
@@ -22,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('client_service');
+        Schema::dropIfExists('category_post');
     }
 };
