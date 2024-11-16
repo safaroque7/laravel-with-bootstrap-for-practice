@@ -69,12 +69,15 @@
                     <p class="pb-2 border-bottom border-grey"> Page Number : <span>
                             {{ __($singleClientInfo->page_number) }} </span> </p>
 
-                    
+
                     <p class="pb-2 border-bottom border-grey"> Status : <span>
-                        {{ __($singleClientInfo->status == 1) ? 'Active' : 'Inactive' }} </span> </p>        
+                            {{ __($singleClientInfo->status == 1) ? 'Active' : 'Inactive' }} </span> </p>
 
-
-
+                    <p class="pb-2 border-bottom border-grey"> Services :
+                        
+                        @foreach ($singleClientServiceInformation->services as $serviceItem)
+                            <span> {{ __($serviceItem->name) . ',' }} </span>
+                        @endforeach
 
                     <div class="border-bottom border-grey">
                         <div class="dropdown">
@@ -114,7 +117,8 @@
                             <label for="service-name" class="fw-bold"> Service Name </label>
                             @foreach ($allService as $service)
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="service-{{$service->id}}">
+                                    <input class="form-check-input" type="checkbox" value=""
+                                        id="service-{{ $service->id }}">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         {{ __($service->name) }}
                                     </label>

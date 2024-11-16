@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('client_sevice', function (Blueprint $table) {
+        Schema::create('client_service', function (Blueprint $table) {
             $table->foreignId('client_id')->constrained('clients')->cascadeOnDelete();
             $table->foreignId('service_id')->constrained('services')->cascadeOnDelete();
         });
@@ -22,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('client_sevice');
+        Schema::dropIfExists('client_service');
     }
 };

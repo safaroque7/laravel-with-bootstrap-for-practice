@@ -130,8 +130,10 @@ class ClientController extends Controller
         $allHostingProvider = HostingProvder::all();
         $allService = Service::all();
         $domainProviderCollection = DomainProvider::all();
-
         $singleClientInfo = Client::findOrFail($id);
+
+        //for service collection
+        $singleClientServiceInformation = Client::with('services')->findOrFail($id);
 
         $previouseClientInfo = Client::where('id', '<', $singleClientInfo->id)->max('id');
         $nextClientInfo = Client::where('id', '>', $singleClientInfo->id)->min('id');
@@ -151,6 +153,7 @@ class ClientController extends Controller
             'allService' => $allService,
             'domainProviderCollection' => $domainProviderCollection,
             'allHostingProvider' => $allHostingProvider,
+            'singleClientServiceInformation' => $singleClientServiceInformation
         ]);
     }
 
