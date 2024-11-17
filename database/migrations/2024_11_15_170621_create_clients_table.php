@@ -22,6 +22,7 @@ return new class extends Migration
             $table->boolean('google_review')->default(0);
             $table->string('page_number')->nullable();
             $table->string('client_photo')->nullable();
+            $table->string('services')->nullable();
             $table->boolean('status')->default(0);
             $table->string('facebook_profile')->nullable();
             $table->string('date_of_birth')->nullable();

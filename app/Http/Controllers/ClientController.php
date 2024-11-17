@@ -55,8 +55,6 @@ class ClientController extends Controller
         return redirect()->back()->with("success", "Your client's information has been recorded successfully.");
     }
 
-
-
     //for showing
     public function show(){
         $clientCollection = Client::all();
@@ -85,7 +83,6 @@ class ClientController extends Controller
             'email' => 'required',
         ]);
 
-
         $updateClient = Client::findOrFail($id);
 
         $imageName = null;
@@ -95,7 +92,6 @@ class ClientController extends Controller
         } else {
             $imageName =  $updateClient->client_photo;
         }
-
 
         $updateClient->name = $request->name;
         $updateClient->phone = $request->phone;

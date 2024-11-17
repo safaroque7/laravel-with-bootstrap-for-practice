@@ -66,14 +66,11 @@
 
                         </span> </p>
 
-                    <p class="pb-2 border-bottom border-grey"> Page Number : <span>
-                            {{ __($singleClientInfo->page_number) }} </span> </p>
+                    <p class="pb-2 border-bottom border-grey"> Page Number : <span>{{ __($singleClientInfo->page_number) }} </span> </p>
 
                     
                     <p class="pb-2 border-bottom border-grey"> Status : <span>
                         {{ __($singleClientInfo->status == 1) ? 'Active' : 'Inactive' }} </span> </p>        
-
-
 
 
                     <div class="border-bottom border-grey">
@@ -95,6 +92,10 @@
                             </ul>
                         </div>
                     </div>
+
+                    {{-- <p class="pb-2 border-bottom border-grey"> Services : <span> {{ __($singleClientInfo->services) }} </span> </p> --}}
+
+                    
                 </div>
             </div>
 
