@@ -7,6 +7,7 @@ use App\Models\Service;
 use Illuminate\Http\Request;
 use App\Models\DomainProvider;
 use App\Models\HostingProvder;
+use App\Models\ClientBaseSerivce;
 
 class ClientController extends Controller
 {
@@ -127,13 +128,14 @@ class ClientController extends Controller
 
     //for showing single client information
     public function showSingleClientInfo($id){
+        $singleClientSerivces =  ClientBaseSerivce::with('services')->findOrFail($id);
         $allHostingProvider = HostingProvder::all();
         $allService = Service::all();
         $domainProviderCollection = DomainProvider::all();
         $singleClientInfo = Client::findOrFail($id);
 
         //for service collection
-        $singleClientServiceInformation = Client::with('services')->findOrFail($id);
+        $singleClientServiceInformation = Client::with('client_base_services')->findOrFail($id);
 
         $previouseClientInfo = Client::where('id', '<', $singleClientInfo->id)->max('id');
         $nextClientInfo = Client::where('id', '>', $singleClientInfo->id)->min('id');
@@ -153,7 +155,8 @@ class ClientController extends Controller
             'allService' => $allService,
             'domainProviderCollection' => $domainProviderCollection,
             'allHostingProvider' => $allHostingProvider,
-            'singleClientServiceInformation' => $singleClientServiceInformation
+            'singleClientServiceInformation' => $singleClientServiceInformation,
+            'singleClientSerivces' => $singleClientSerivces,
         ]);
     }
 

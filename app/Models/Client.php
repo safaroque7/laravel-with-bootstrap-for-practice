@@ -28,4 +28,9 @@ class Client extends Model
     public function services(){
         return $this->belongsToMany(Service::class);
     }
+
+    //for client_base_service_names_on_single_page
+    public function client_base_services(){
+        return $this->hasMany(Client::class);
+    }
 }
