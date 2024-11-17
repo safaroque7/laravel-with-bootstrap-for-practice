@@ -34,6 +34,7 @@
             </thead>
             <tbody>
 
+
                 @foreach ($clientCollection as $clientItem)
                     <!-- client item start -->
                     <tr>

@@ -18,10 +18,11 @@
             <!-- left arrow end -->
 
             <div class="col-md-1">
-                <img src="/images/{{ $singleClientInfo->client_photo }}" alt="Client-photo" class="me-md-2 me-1 img-fluid"
+                <img src="/images/{{ $singleClientInfo->client_photo }}" alt="Client-photo" class="me-md-2 me-1 img-fluid img-fluid"
                     onerror="this.onerror=null;this.src='https://picsum.photos/id/5/354/415';" alt="Client Photo"
-                    class="img-fluid">
+                >
             </div>
+            
             <div class="col-md-3">
 
                 <div class="d-flex flex-column">
@@ -72,16 +73,6 @@
                     <p class="pb-2 border-bottom border-grey"> Status : <span>
                             {{ __($singleClientInfo->status == 1) ? 'Active' : 'Inactive' }} </span> </p>
 
-<<<<<<< HEAD
-=======
-                    <p class="pb-2 border-bottom border-grey"> Services :
-
-                        @foreach ($singleClientServiceInformation->services as $index => $serviceItem)
-                            <span> {{ __($serviceItem->name) }}
-                                {{ $index < count($singleClientServiceInformation->services) - 1 ? ', ' : '' }} </span>
-                        @endforeach
-
->>>>>>> b35ac51f52834bb63059fce2fa76408e58e66f67
                     <div class="border-bottom border-grey">
                         <div class="dropdown">
                             Action :
@@ -202,7 +193,6 @@
 
                         <!-- client item start -->
                         <tr>
-                            {!! $singleClientSerivces !!}
                             
                             <td>
 

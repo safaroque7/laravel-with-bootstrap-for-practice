@@ -124,14 +124,14 @@ class ClientController extends Controller
 
     //for showing single client information
     public function showSingleClientInfo($id){
-        $singleClientSerivces =  ClientBaseSerivce::with('services')->findOrFail($id);
+        // $singleClientSerivces =  ClientBaseSerivce::with('services')->findOrFail($id);
         $allHostingProvider = HostingProvder::all();
         $allService = Service::all();
         $domainProviderCollection = DomainProvider::all();
         $singleClientInfo = Client::findOrFail($id);
 
         //for service collection
-        $singleClientServiceInformation = Client::with('client_base_services')->findOrFail($id);
+        // $singleClientServiceInformation = Client::with('client_base_services')->findOrFail($id);
 
         $previouseClientInfo = Client::where('id', '<', $singleClientInfo->id)->max('id');
         $nextClientInfo = Client::where('id', '>', $singleClientInfo->id)->min('id');
@@ -151,8 +151,8 @@ class ClientController extends Controller
             'allService' => $allService,
             'domainProviderCollection' => $domainProviderCollection,
             'allHostingProvider' => $allHostingProvider,
-            'singleClientServiceInformation' => $singleClientServiceInformation,
-            'singleClientSerivces' => $singleClientSerivces,
+            // 'singleClientServiceInformation' => $singleClientServiceInformation,
+            // 'singleClientSerivces' => $singleClientSerivces,
         ]);
     }
 
@@ -161,9 +161,16 @@ class ClientController extends Controller
 
         $activeClientsEmailAddresess = Client::where('status', 1)->get('email');
         $inActiveClientsEmailAddresess = Client::where('status', 0)->get('email');
-        $facebookReviewLeftCollection = Client::where('facebook_review', 0)->get('email');
 
+        $totalActiveClientEmail = Client::where('status', 1)->count();
+        $totalInactiveClientEmail = Client::where('status', 0)->count();;
 
+        $facebookReviewedCollection = Client::where('facebook_review', 1)->get('email');
+        $totalFacebookReviewLeftCollection = Client::where('facebook_review', 1)->count();
+
+        $facebookReviewLeftCollection = Client::where('facebook_review', 0)->get('email');;
+        $totalEmailOfLeftFacebookReview = Client::where('facebook_review', 0)->count();;
+        
         // $domainProvidersCollection = DomainProvider::all();
         // $hostingProvderCollection = HostingProvder::all();
 
@@ -177,6 +184,14 @@ class ClientController extends Controller
             'activeClientsEmailAddresess' => $activeClientsEmailAddresess,
             'inActiveClientsEmailAddresess' => $inActiveClientsEmailAddresess,
             'facebookReviewLeftCollection' => $facebookReviewLeftCollection,
+            'totalEmailOfLeftFacebookReview' => $totalEmailOfLeftFacebookReview,
+            'totalActiveClientEmail' => $totalActiveClientEmail,
+
+            'facebookReviewedCollection' => $facebookReviewedCollection,
+            'totalFacebookReviewLeftCollection' => $totalFacebookReviewLeftCollection,
+
+
+            'totalInactiveClientEmail' => $totalInactiveClientEmail,
          ]);
     }
 }

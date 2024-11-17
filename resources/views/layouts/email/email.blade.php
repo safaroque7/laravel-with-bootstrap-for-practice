@@ -19,8 +19,9 @@
         <div class="mb-md-3 mb-2">
             <div class="d-flex align-items-center mb-md-2 md-1">
                 <button class="btn btn-primary"> Click to send email </button>
-                <span class="border rounded ms-md-2 ms-1 p-1"> 000 </span>
-                <span class="text-uppercase border ms-md-2 ms-1 p-1 fw-bold"> Active Users' Email Addressess </span>
+                <span class="border rounded ms-md-2 ms-1 p-1"> {{ __($totalActiveClientEmail) }} </span>
+                <span class="text-uppercase border ms-md-2 ms-1 p-1 fw-bold bg-success rounded text-white"> Active Users'
+                    Email Addressess </span>
             </div>
 
             <div class="p-2 border border-secondary rounded">
@@ -40,8 +41,9 @@
         <div class="mb-md-3 mb-2">
             <div class="d-flex align-items-center mb-md-2 md-1">
                 <button class="btn btn-primary"> Click to send email </button>
-                <span class="border rounded ms-md-2 ms-1 p-1"> 000 </span>
-                <span class="text-uppercase border ms-md-2 ms-1 p-1 fw-bold"> Inactive Users' Email Addressess </span>
+                <span class="border rounded ms-md-2 ms-1 p-1"> {{ __($totalInactiveClientEmail) }} </span>
+                <span class="text-uppercase border ms-md-2 ms-1 p-1 fw-bold bg-danger rounded text-white"> Inactive Users'
+                    Email Addressess </span>
             </div>
 
             <div class="p-2 border border-secondary rounded">
@@ -56,13 +58,35 @@
         </div>
         {{-- per ection email addressess end --}}
 
-        
-        {{-- per ection email addressess start --}}
+
+        {{-- per section email addressess start --}}
         <div class="mb-md-3 mb-2">
             <div class="d-flex align-items-center mb-md-2 md-1">
                 <button class="btn btn-primary"> Click to send email </button>
-                <span class="border rounded ms-md-2 ms-1 p-1"> 000 </span>
-                <span class="text-uppercase border ms-md-2 ms-1 p-1 fw-bold"> Facebook Review Left Email Addressess </span>
+                <span class="border rounded ms-md-2 ms-1 p-1"> {{ __($totalFacebookReviewLeftCollection) }} </span>
+                <span class="text-uppercase border ms-md-2 ms-1 p-1 fw-bold bg-success rounded text-white"> Facebook
+                    Reviewed Email Addressess </span>
+            </div>
+
+            <div class="p-2 border border-secondary rounded">
+                <code>
+                    @if (isset($facebookReviewedCollection))
+                        @foreach ($facebookReviewedCollection as $facebookReviewedItem)
+                            {{ __($facebookReviewedItem->email) }}
+                        @endforeach
+                    @endif
+                </code>
+            </div>
+        </div>
+        {{-- per section email addressess end --}}
+
+        {{-- per section email addressess start --}}
+        <div class="mb-md-3 mb-2">
+            <div class="d-flex align-items-center mb-md-2 md-1">
+                <button class="btn btn-primary"> Click to send email </button>
+                <span class="border rounded ms-md-2 ms-1 p-1"> {{ __($totalEmailOfLeftFacebookReview) }} </span>
+                <span class="text-uppercase border ms-md-2 ms-1 p-1 fw-bold bg-danger rounded text-white"> Facebook Review
+                    Left Email Addressess </span>
             </div>
 
             <div class="p-2 border border-secondary rounded">
@@ -75,7 +99,7 @@
                 </code>
             </div>
         </div>
-        {{-- per ection email addressess end --}}
+        {{-- per section email addressess end --}}
 
 
 
