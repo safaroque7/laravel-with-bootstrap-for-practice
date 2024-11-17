@@ -44,6 +44,8 @@ class PostController extends Controller
         $arrayPost->comments = $request->comments;
         $arrayPost->save();
 
+        $arrayPost->categories()->sync($request->categories);
+
         return redirect()->back()->with('success', 'The post has been posted successfully');
     }
 

@@ -68,11 +68,20 @@
 
                     <p class="pb-2 border-bottom border-grey"> Page Number : <span>{{ __($singleClientInfo->page_number) }} </span> </p>
 
-                    
+
                     <p class="pb-2 border-bottom border-grey"> Status : <span>
-                        {{ __($singleClientInfo->status == 1) ? 'Active' : 'Inactive' }} </span> </p>        
+                            {{ __($singleClientInfo->status == 1) ? 'Active' : 'Inactive' }} </span> </p>
 
+<<<<<<< HEAD
+=======
+                    <p class="pb-2 border-bottom border-grey"> Services :
 
+                        @foreach ($singleClientServiceInformation->services as $index => $serviceItem)
+                            <span> {{ __($serviceItem->name) }}
+                                {{ $index < count($singleClientServiceInformation->services) - 1 ? ', ' : '' }} </span>
+                        @endforeach
+
+>>>>>>> b35ac51f52834bb63059fce2fa76408e58e66f67
                     <div class="border-bottom border-grey">
                         <div class="dropdown">
                             Action :
@@ -100,7 +109,8 @@
             </div>
 
             <div class="col-md-6">
-                <form action="#" method="POST">
+                <form action="{{ route('client-base-services-store') }}" method="POST">
+                    @csrf
                     <div class="row border border-dark-subtle mb-md-3 d-flex py-2">
 
                         {{-- Domain Name Start --}}
@@ -115,8 +125,9 @@
                             <label for="service-name" class="fw-bold"> Service Name </label>
                             @foreach ($allService as $service)
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="service-{{$service->id}}">
-                                    <label class="form-check-label" for="flexCheckDefault">
+                                    <input class="form-check-input" type="checkbox" name="service_names[]"
+                                        value="{{ __($service->id) }}" id="service-{{ __($service->id) }}">
+                                    <label class="form-check-label" for="service-{{ __($service->id) }}">
                                         {{ __($service->name) }}
                                     </label>
                                 </div>
@@ -127,7 +138,7 @@
 
                         <div class="col">
                             <label for="domain-provider" class="fw-bold"> Domain Provider </label>
-                            <select name="domain_provider" id="service-name" class="form-control">
+                            <select name="domain_provider" id="domain-provider" class="form-control">
                                 <option> --select one-- </option>
 
                                 @foreach ($domainProviderCollection as $domainProviderItem)
@@ -191,14 +202,8 @@
 
                         <!-- client item start -->
                         <tr>
-                            <td> 01 </td>
-                            <td> qaominews.com </td>
-                            <td> Linkon </td>
-                            <td> Linkon </td>
-                            <td> International </td>
-                            <td> 5GB </td>
-                            <td> 01/01/2024 </td>
-
+                            {!! $singleClientSerivces !!}
+                            
                             <td>
 
 

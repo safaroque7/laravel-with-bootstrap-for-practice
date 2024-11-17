@@ -11,6 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
+
+        Schema::create('category_post', function (Blueprint $table) {
+            $table->foreignId('post_id')->constrained('posts')->cascadeOnDelete(); //
+            $table->foreignId('category_id')->constrained('categories')->cascadeOnDelete(); //
+        });
+
+
+        
         // pivot table
         Schema::create('category_post', function (Blueprint $table) {
             $table->foreignId('category_id')->constrained('categories')->cascadeOnDelete();

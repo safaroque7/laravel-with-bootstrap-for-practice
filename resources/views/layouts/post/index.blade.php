@@ -42,7 +42,7 @@
                         @foreach ($allCategoryCollection as $allCategoryItem)
                             <li>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value=""
+                                    <input class="form-check-input" type="checkbox" name="categories[]" value="{{ __($allCategoryItem->id) }}"
                                         id="category{{ __($allCategoryItem->id) }}">
                                     <label class="form-check-label" for="category{{ __($allCategoryItem->id) }}">
                                         {{ __($allCategoryItem->name) }} </label>

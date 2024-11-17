@@ -1,14 +1,16 @@
 <?php
 
-use App\Http\Controllers\CategoryController;
+use App\Models\clientBaseSerivce;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\DomainProviderController;
-use App\Http\Controllers\HostingProvderController;
-use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\DomainProviderController;
+use App\Http\Controllers\HostingProvderController;
+use App\Http\Controllers\ClientBaseSerivceController;
 
 
 Route::get('/dashboard', function () {
@@ -77,6 +79,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/category-edit/{id}', [CategoryController::class, 'edit'])->name('category-edit');
     Route::post('/category-update/{id}', [CategoryController::class, 'update'])->name('category-update');
     Route::get('/category-delete/{id}', [CategoryController::class, 'delete'])->name('category-delete');
+
+    //client based services
+    Route::post('/client-base-services-store', [ClientBaseSerivceController::class, 'store'])->name('client-base-services-store');
+
 });
 
 Route::get('/contact-form', function () {
