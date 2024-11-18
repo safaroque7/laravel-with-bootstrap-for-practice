@@ -23,3 +23,24 @@ td.post-image-size {
 .category-items-box {
     height: 300px;
 }
+
+
+
+
+.bxslider-ticker>li>a:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: red;
+    position: absolute;
+    top: 2%;
+    left: -4%;
+}
+
+.bxslider-ticker>li>a {
+    position: relative;
+}
+
+.bxslider-ticker>li {
+    padding-left: 10px;
+}

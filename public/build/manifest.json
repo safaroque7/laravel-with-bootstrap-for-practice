@@ -7,6 +7,14 @@
     "file": "assets/bootstrap-icons-BtvjY1KL.woff2",
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
+  "node_modules/bxslider/dist/images/bx_loader.gif": {
+    "file": "assets/bx_loader-tUZRlpHG.gif",
+    "src": "node_modules/bxslider/dist/images/bx_loader.gif"
+  },
+  "node_modules/bxslider/dist/images/controls.png": {
+    "file": "assets/controls-CkqRXZQX.png",
+    "src": "node_modules/bxslider/dist/images/controls.png"
+  },
   "node_modules/datatables/media/images/sort_asc.png": {
     "file": "assets/sort_asc-B4Gje4tW.png",
     "src": "node_modules/datatables/media/images/sort_asc.png"
@@ -28,12 +36,12 @@
     "src": "node_modules/datatables/media/images/sort_desc_disabled.png"
   },
   "resources/js/app.js": {
-    "file": "assets/app-C2jnebXP.js",
+    "file": "assets/app-BVqyPOL1.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-DiKdzzMu.css"
+      "assets/app-Drm_f9VU.css"
     ],
     "assets": [
       "assets/bootstrap-icons-BtvjY1KL.woff2",
@@ -42,7 +50,9 @@
       "assets/sort_asc-B4Gje4tW.png",
       "assets/sort_desc-CY-iuP5X.png",
       "assets/sort_asc_disabled-CJD3ufk-.png",
-      "assets/sort_desc_disabled-Ce0Saquh.png"
+      "assets/sort_desc_disabled-Ce0Saquh.png",
+      "assets/bx_loader-tUZRlpHG.gif",
+      "assets/controls-CkqRXZQX.png"
     ]
   },
   "resources/sass/app.scss": {

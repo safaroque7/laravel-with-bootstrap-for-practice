@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Post;
 use App\Models\clientBaseSerivce;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
@@ -14,7 +15,10 @@ use App\Http\Controllers\ClientBaseSerivceController;
 
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $allPostCollectionForSlider = Post::all();
+    return view('dashboard', [
+        'allPostCollectionForSlider'=>$allPostCollectionForSlider
+    ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
