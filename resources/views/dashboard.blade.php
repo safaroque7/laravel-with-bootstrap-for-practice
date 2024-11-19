@@ -2,7 +2,7 @@
 
 
 @section('content')
-    <div class="col-md-10 mt-md-3">
+    <div class="col-md-10 mt-md-3 pe-5">
         <div class="row">
             <div class="col-md-3 col-6 mb-md-4 mb-2 text-center">
                 <div class="bg-light rounded-3 border border-secondary">
@@ -139,8 +139,6 @@
                     </h1>
                 </div>
             </div>
-
-
         </div>
 
         <div class="row">
@@ -149,8 +147,9 @@
                     @foreach ($allPostCollectionForSlider as $allPostCollectionForSliderItem)
                         <div class="position-relative">
                             <img src="/images/{{ $allPostCollectionForSliderItem->image }}" class="w-100" alt="image">
-                            <h2 class="position-absolute bottom-0 p-2 text-dark bg-body-secondary w-100 d-block lh-base">
-                                {{ __($allPostCollectionForSliderItem->title) }} </h2>
+                            <h2 class="position-absolute bottom-0 p-2 text-white bg-transparent-50-parcent-black w-100 d-block lh-base">
+                                <a href="{{ route('single-post', $allPostCollectionForSliderItem->id) }}" class="text-decoration-none text-white text-center d-block"> {{ __($allPostCollectionForSliderItem->title) }} </a>
+                            </h2>
                         </div>
                     @endforeach
                 </div>
@@ -161,7 +160,11 @@
             <div>
                 <ul class="bg-info bxslider-ticker" style="list-stye:square">
                     @foreach ($allPostCollectionForSlider as $allPostCollectionForSliderItem)
-                        <li> <a href="#" class="text-decoration-none text-dark"> {{ __($allPostCollectionForSliderItem->title) }} </a> </li>
+                        <li> 
+                            <a href="{{ route('single-post', $allPostCollectionForSliderItem->id) }}" class="text-decoration-none text-dark">
+                                {{ __($allPostCollectionForSliderItem->title) }} 
+                            </a> 
+                        </li>
                     @endforeach
 
                 </ul>

@@ -14,47 +14,51 @@
 <body>
     <div class="container-fluid">
         <div class="row bg-dark">
-            <div class="d-flex justify-content-between align-items-center">
-                <h2 class="text-white">
-                    <a href="{{ route('dashboard') }}" class="text-white text-decoration-none">
-                        Dashboard
-                    </a>
-                </h2>
+            <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2 class="text-white">
+                        <a href="{{ route('dashboard') }}" class="text-white text-decoration-none">
+                            Dashboard
+                        </a>
+                    </h2>
 
-                <div class="time-and-date-par">
-                    <h5 class="mb-0 text-white">
-                        {{ $currentDayName . ', ' . $currentDay . ' ' . $currentMonth . ' ' . $currentYear }} <i
-                            class="bi bi-dash"></i> <span id="hour">00</span> : <span id="minute">00</span> :
-                        <span id="seconds">00</span> <span id="session">00</span>
-                    </h5>
-                </div>
+                    <div class="time-and-date-par">
+                        <h5 class="mb-0 text-white">
+                            {{ $currentDayName . ', ' . $currentDay . ' ' . $currentMonth . ' ' . $currentYear }} <i
+                                class="bi bi-dash"></i> <span id="hour">00</span> : <span id="minute">00</span>
+                            :
+                            <span id="seconds">00</span> <span id="session">00</span>
+                        </h5>
+                    </div>
 
 
-                <div class="login-info d-flex jusity-content-betwee align-items-center py-md-2 py-1">
-                    <p class="text-white pe-md-3 pe-2 mb-0">S A Faroque</p>
-                    <div class="dropdown">
-                        <div class="dropdown-toggle bg-dark" id="profile1" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <img src="https://picsum.photos/id/5/30/30" alt=""
-                                class="img-fluid rounded-circle border border-white" />
-                            <span class="text-white"><i class="bi bi-caret-down-fill"></i></span>
-                        </div>
-                        <ul class="dropdown-menu" aria-labelledby="profile1">
+                    <div class="login-info d-flex jusity-content-betwee align-items-center py-md-2 py-1">
+                        <p class="text-white pe-md-3 pe-2 mb-0">S A Faroque</p>
+                        <div class="dropdown">
+                            <div class="dropdown-toggle bg-dark" id="profile1" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="https://picsum.photos/id/5/30/30" alt=""
+                                    class="img-fluid rounded-circle border border-white" />
+                                <span class="text-white"><i class="bi bi-caret-down-fill"></i></span>
+                            </div>
+                            <ul class="dropdown-menu" aria-labelledby="profile1">
 
-                            <li><a class="dropdown-item" href="{{ route('profile.edit') }}">{{ __('Profile') }}</a></li>
-                            <li> <a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
+                                <li><a class="dropdown-item" href="{{ route('profile.edit') }}">{{ __('Profile') }}</a>
+                                </li>
+                                <li> <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
-                                    {{ __('Log Out') }}
-                                </a> </li>
+                                        {{ __('Log Out') }}
+                                    </a> </li>
 
 
-                            <li>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </li>
-                        </ul>
+                                <li>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -102,30 +106,30 @@
                         <span class="text-white me-md-3 me-2 float-end"> {{ __($totalHostingProvder) }} </span>
                     </a>
                 </li>
-                
+
                 <li class="nav-item border-bottom">
                     <a class="nav-link text-white" href="{{ route('email') }}">
-                        <i class="bi bi-grid-3x3-gap-fill pe-md-3 pe-2"></i>Email 
-                        
+                        <i class="bi bi-grid-3x3-gap-fill pe-md-3 pe-2"></i>Email
+
                     </a>
                 </li>
-                
+
                 <li class="nav-item border-bottom">
                     <a class="nav-link text-white" href="{{ route('add-new-post') }}">
-                        <i class="bi bi-grid-3x3-gap-fill pe-md-3 pe-2"></i>Add New Post 
+                        <i class="bi bi-grid-3x3-gap-fill pe-md-3 pe-2"></i>Add New Post
                     </a>
                 </li>
 
                 <li class="nav-item border-bottom">
                     <a class="nav-link text-white" href="{{ route('show-all-post') }}">
-                        <i class="bi bi-grid-3x3-gap-fill pe-md-3 pe-2"></i>All Posts 
+                        <i class="bi bi-grid-3x3-gap-fill pe-md-3 pe-2"></i>All Posts
                         <span class="text-white me-md-3 me-2 float-end"> {{ __($totalPosts) }} </span>
                     </a>
                 </li>
 
                 <li class="nav-item border-bottom">
                     <a class="nav-link text-white" href="{{ route('category') }}">
-                        <i class="bi bi-grid-3x3-gap-fill pe-md-3 pe-2"></i>Category 
+                        <i class="bi bi-grid-3x3-gap-fill pe-md-3 pe-2"></i>Category
                         <span class="text-white me-md-3 me-2 float-end"> {{ __($totalCategories) }} </span>
                     </a>
                 </li>

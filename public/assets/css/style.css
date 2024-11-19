@@ -33,8 +33,9 @@ td.post-image-size {
     height: 10px;
     background: red;
     position: absolute;
-    top: 2%;
-    left: -4%;
+    top: 15%;
+    left: -5%;
+    display: block;
 }
 
 .bxslider-ticker>li>a {
@@ -43,4 +44,8 @@ td.post-image-size {
 
 .bxslider-ticker>li {
     padding-left: 10px;
+}
+
+.bg-transparent-50-parcent-black{
+    background-color: rgba(0,0,0,0.5);
 }

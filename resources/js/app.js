@@ -8,6 +8,7 @@ import 'bxslider/dist/jquery.bxslider.min.css';
 
 $(document).ready(function() {
     $('.bxslider').bxSlider({
+        mode:'fade',
         auto: true,           // Enable auto sliding
         pause: 4000,          // Pause time for each slide in milliseconds
         speed: 500,           // Speed of transition between slides
@@ -15,7 +16,9 @@ $(document).ready(function() {
         minSlides: 1,         // Minimum number of slides visible at a time
         maxSlides: 1,         // Maximum number of slides visible at a time
         slideMargin: 10,      // Margin between slides
-        moveSlides: 1         // Number of slides to move at a time
+        moveSlides: 1,         // Number of slides to move at a time
+        pager: false,           // Whether to
+
     });
 
     //ticker
@@ -23,8 +26,9 @@ $(document).ready(function() {
         minSlides: 4,
         maxSlides: 4,
         slideWidth: 'auto',
-        slideMargin: 20,
+        slideMargin: 30,
         ticker: true,
-        speed: 9000
+        speed: 9000,
+        tickerHover:true
       });
 });

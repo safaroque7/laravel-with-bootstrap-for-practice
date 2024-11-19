@@ -15,7 +15,7 @@ use App\Http\Controllers\ClientBaseSerivceController;
 
 
 Route::get('/dashboard', function () {
-    $allPostCollectionForSlider = Post::all();
+    $allPostCollectionForSlider = Post::select('title', 'image', 'id')->orderBy('id', 'desc')->limit(5)->get(); //
     return view('dashboard', [
         'allPostCollectionForSlider'=>$allPostCollectionForSlider
     ]);
