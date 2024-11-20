@@ -63,8 +63,6 @@
                             @else
                                 {{ __('No') }}
                             @endif
-
-
                         </span> </p>
 
                     <p class="pb-2 border-bottom border-grey"> Page Number : <span>{{ __($singleClientInfo->page_number) }} </span> </p>
@@ -193,35 +191,6 @@
 
                         <!-- client item start -->
                         <tr>
-                            
-                            <td>
-
-
-                                <div class="border-bottom border-grey">
-                                    <div class="dropdown">
-                                        <button class="btn" type="button" id="dropdownMenuButton3"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="bi bi-three-dots-vertical"></i>
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-
-                                            <li><a class="dropdown-item" href="#">Edit</a>
-                                            </li>
-                                            <li><a onclick="return confirm('Are you sure you want to delete this item?')"
-                                                    class="dropdown-item" href="#">Delete</a></li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-
-                            </td>
-
-                        </tr>
-                        <!-- client item start -->
-
-
-                        <!-- client item start -->
-                        <tr>
                             <td> 02 </td>
                             <td> weeklybanglagazette.com </td>
                             <td> Linkon </td>
@@ -229,41 +198,6 @@
                             <td> BDiX </td>
                             <td> 5GB </td>
                             <td> 05/06/2024 </td>
-
-                            <td>
-
-
-                                <div class="border-bottom border-grey">
-                                    <div class="dropdown">
-                                        <button class="btn" type="button" id="dropdownMenuButton3"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="bi bi-three-dots-vertical"></i>
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-
-                                            <li><a class="dropdown-item" href="#">Edit</a>
-                                            </li>
-                                            <li><a onclick="return confirm('Are you sure you want to delete this item?')"
-                                                    class="dropdown-item" href="#">Delete</a></li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-
-                            </td>
-
-                        </tr>
-                        <!-- client item start -->
-
-                        <!-- client item start -->
-                        <tr>
-                            <td> 03 </td>
-                            <td> daynightbd.com </td>
-                            <td> Linkon </td>
-                            <td> Linkon </td>
-                            <td> Adil </td>
-                            <td> 7GB </td>
-                            <td> 02/01/2024 </td>
                             <td>
                                 <div class="border-bottom border-grey">
                                     <div class="dropdown">
@@ -277,64 +211,7 @@
                                             </li>
                                             <li><a onclick="return confirm('Are you sure you want to delete this item?')"
                                                     class="dropdown-item" href="#">Delete</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <!-- client item start -->
 
-                        <!-- client item start -->
-                        <tr>
-                            <td> 04 </td>
-                            <td> English Student </td>
-                            <td> 0 </td>
-                            <td> 0 </td>
-                            <td> 0 </td>
-                            <td> 0 </td>
-                            <td> 01/05/2024 </td>
-                            <td>
-                                <div class="border-bottom border-grey">
-                                    <div class="dropdown">
-                                        <button class="btn" type="button" id="dropdownMenuButton3"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="bi bi-three-dots-vertical"></i>
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-
-                                            <li><a class="dropdown-item" href="#">Edit</a>
-                                            </li>
-                                            <li><a onclick="return confirm('Are you sure you want to delete this item?')"
-                                                    class="dropdown-item" href="#">Delete</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <!-- client item start -->
-
-                        <!-- client item start -->
-                        <tr>
-                            <td> 05 </td>
-                            <td> English and Web Development Student </td>
-                            <td> 0 </td>
-                            <td> 0 </td>
-                            <td> 0 </td>
-                            <td> 0 </td>
-                            <td> 05/08/2024 </td>
-                            <td>
-                                <div class="border-bottom border-grey">
-                                    <div class="dropdown">
-                                        <button class="btn" type="button" id="dropdownMenuButton3"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="bi bi-three-dots-vertical"></i>
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-
-                                            <li><a class="dropdown-item" href="#">Edit</a>
-                                            </li>
-                                            <li><a onclick="return confirm('Are you sure you want to delete this item?')"
-                                                    class="dropdown-item" href="#">Delete</a></li>
                                         </ul>
                                     </div>
                                 </div>
