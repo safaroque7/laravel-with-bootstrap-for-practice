@@ -97,7 +97,7 @@
                     <label for="page-number" class="form-label fw-bold">
                         Page Number
                     </label>
-                    <input type="number" name="page_number" value="{{ old('page_number') }}" id="page-number"
+                    <input type="text" name="page_number" value="{{ old('page_number') }}" id="page-number"
                         class="form-control" />
                 </div>
 
